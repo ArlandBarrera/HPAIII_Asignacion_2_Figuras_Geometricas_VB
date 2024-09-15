@@ -15,8 +15,38 @@
 \usepackage{xcolor}
 \usepackage{titlesec}
 \usepackage{amsmath}
+\usepackage{listings}
+\usepackage{tcolorbox}
+\usepackage{tabularx}
+
+
+\lstset
+{
+    breaklines=true,
+    tabsize=3,
+    showstringspaces=false
+}
+
+\lstdefinestyle{vbstyle}{
+  language={[Visual]Basic},
+  backgroundcolor=\color{lightgray}, % Color de fondo
+  basicstyle=\ttfamily\small, % Tamanoo y tipo de fuente
+  keywordstyle=\color{blue}, % Color para palabras clave
+  commentstyle=\color{green}, % Color para comentarios
+  stringstyle=\color{red}, % Ccadenas de texto
+  numberstyle=\tiny\color{gray}, % Coñor y tamaño de los números de línea
+  stepnumber=1,
+  numbers=left, % esto es para el # de la linea
+  numbersep=5pt,
+  showstringspaces=false,
+  frame=single,
+  breaklines=true
+}
+
 \renewcommand{\contentsname}{Contenido}
 \renewcommand{\figurename}{Figura}
+\renewcommand{\listtablename}{Lista de tablas}
+\renewcommand{\listfigurename}{Lista de figuras}
 \usepackage[fontsize=13.5pt]{fontsize}
 \setlength{\parindent}{0pt}
 
@@ -43,6 +73,8 @@
 \begin{document}
 \input{1.Portada/portada.tex}
 \tableofcontents
+\listoffigures
+%\listoftables para lista de tablas 
 \chapter{Introducción}
 \input{2.Introduccion/intro.tex}
 \chapter{Desarrollo}
